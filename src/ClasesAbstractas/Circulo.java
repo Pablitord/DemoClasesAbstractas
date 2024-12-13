@@ -2,7 +2,7 @@ package ClasesAbstractas;
 
 public class Circulo extends FiguraGeometrica {
 	
-	private double Pi = Math.PI;
+	private double Pi = Math.PI; //Math.PI para tener el valor exacto de PI
 	private double R;
 	
 	public Circulo(double R, String nombreFigura) {
