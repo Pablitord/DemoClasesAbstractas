@@ -2,8 +2,13 @@ package ClasesAbstractas;
 
 public class Circulo extends FiguraGeometrica {
 	
-	private double Pi = 3.1426;
+	private double Pi = Math.PI;
 	private double R;
+	
+	public Circulo(double R, String nombreFigura) {
+		super(nombreFigura);
+		this.R = R;
+	}
 
 	@Override
 	double calcularArea() {

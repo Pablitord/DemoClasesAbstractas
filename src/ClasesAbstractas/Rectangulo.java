@@ -4,6 +4,13 @@ public class Rectangulo extends FiguraGeometrica{
 	
 	private double base;
 	private double altura;
+	
+	public Rectangulo(double altura, double base, String nombreFigura) {
+		super(nombreFigura);
+		this.altura = altura;
+		this.base = base;
+	}
+
 
 	@Override
 	double calcularArea() {
@@ -26,5 +33,7 @@ public class Rectangulo extends FiguraGeometrica{
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
+	
+	
 
 }

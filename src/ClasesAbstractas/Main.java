@@ -3,55 +3,42 @@ package ClasesAbstractas;
 public class Main {
 
 	public static void main(String[] args) {
-		Rectangulo rectangulo1 = new Rectangulo();
+		FiguraGeometrica rectangulo1 = new Rectangulo(15, 30, "Rectangulo 1");
+		FiguraGeometrica rectangulo2 = new Rectangulo(30, 60, "Rectángulo 2");
 		
-		rectangulo1.setAltura(15);
-		rectangulo1.setBase(30);
-		rectangulo1.setNombreFigura("Rectángulo 1: ");
-		System.out.println("Área del " + rectangulo1.nombreFigura + rectangulo1.calcularArea());
-		
-		Rectangulo rectangulo2 = new Rectangulo();
-		
-		rectangulo2.setAltura(30);
-		rectangulo2.setBase(60);
-		rectangulo2.setNombreFigura("Rectángulo 2: ");
-		System.out.println("Área del " + rectangulo2.getNombreFigura()+ rectangulo2.calcularArea());
+		mostrarArea(rectangulo1);
+		mostrarArea(rectangulo2);
 		
 		FiguraGeometrica rectanguloMayor = CompararFiguras.compararFiguras(rectangulo1, rectangulo2);
-		System.out.println("El " + rectanguloMayor.getNombreFigura() + " es mayor");
+		System.out.println("El " + rectanguloMayor.getNombreFigura() + " es mayor\n");
 		
-		Triangulo triangulo1 = new Triangulo();
+		//---------------------------------------------------------------------------------------------------------------------------------
 		
-		triangulo1.setAltura(45);
-		triangulo1.setBase(20);
-		triangulo1.setNombreFigura("Triángulo 1: ");
-		System.out.println("\nÁrea del " + triangulo1.getNombreFigura() + triangulo1.calcularArea() );
+		FiguraGeometrica triangulo1 = new Triangulo(45, 20, "Triángulo 1");
+		FiguraGeometrica triangulo2 = new Triangulo(25, 10, "Triángulo 2");
 		
-		Triangulo triangulo2 = new Triangulo();
-		
-		triangulo2.setAltura(25);
-		triangulo2.setBase(10);
-		triangulo2.setNombreFigura("Triángulo 2: ");
-		System.out.println("Área del " + triangulo2.getNombreFigura() + triangulo2.calcularArea());
+		mostrarArea(triangulo1);
+		mostrarArea(triangulo2);
 		
 		FiguraGeometrica trianguloMayor = CompararFiguras.compararFiguras(triangulo1, triangulo2);
-		System.out.println("El " + trianguloMayor.getNombreFigura() + " es mayor");
+		System.out.println("El " + trianguloMayor.getNombreFigura() + " es mayor\n");
 		
-		Circulo circulo1 = new Circulo();
+		//----------------------------------------------------------------------------------------------------------------------------------
 		
-		circulo1.setR(5);
-		circulo1.setNombreFigura("Círculo 1: ");
-		System.out.println("\nÁrea del " + circulo1.getNombreFigura() + circulo1.calcularArea());
+		FiguraGeometrica circulo1 = new Circulo(5, "Círculo 1");
+		FiguraGeometrica circulo2 = new Circulo(2.5, "Círculo 2");
 		
-		Circulo circulo2 = new Circulo();
-		
-		circulo2.setR(2.5);
-		circulo2.setNombreFigura("Círculo 2: ");
-		System.out.println("Área del " + circulo2.getNombreFigura() + circulo2.calcularArea());
+		mostrarArea(circulo1);
+		mostrarArea(circulo2);	
 		
 		FiguraGeometrica circuloMayor = CompararFiguras.compararFiguras(circulo1, circulo2);
 		System.out.println("El " + circuloMayor.getNombreFigura() + " es mayor");
 
+	}
+	
+	
+	private static void mostrarArea(FiguraGeometrica rectangulo) {
+		System.out.println("Área del " +  rectangulo.getNombreFigura() + ": " + rectangulo.calcularArea());
 	}
 
 }

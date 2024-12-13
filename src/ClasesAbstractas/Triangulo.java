@@ -4,6 +4,12 @@ public class Triangulo extends FiguraGeometrica{
 	
 	private double base;
 	private double altura;
+	
+	public Triangulo(double altura, double base, String nombreFigura) {
+		super(nombreFigura);
+		this.altura = altura;
+		this.base = base;
+	}
 
 	@Override
 	double calcularArea() {

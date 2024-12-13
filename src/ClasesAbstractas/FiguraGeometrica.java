@@ -4,7 +4,11 @@ public abstract class FiguraGeometrica {
 	
 	public String nombreFigura;
 	
-	
+	public FiguraGeometrica(String nombreFigura) {
+		this.nombreFigura = nombreFigura;
+	}
+
+
 	abstract double calcularArea();
 	
 	public boolean mayorQue(FiguraGeometrica figura) {
