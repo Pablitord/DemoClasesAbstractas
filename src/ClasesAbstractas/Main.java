@@ -37,6 +37,12 @@ public class Main {
 		triangulo2.setNombreFigura("Triángulo 2: ");
 		System.out.println("Área del " + triangulo2.getNombreFigura() + triangulo2.calcularArea());
 		
+		if (triangulo1.mayorQue(triangulo2)){
+			System.out.println("El " + triangulo1.getNombreFigura() + " es mayor que el " + triangulo2.getNombreFigura());
+		} else {
+			System.out.println("El " + triangulo2.getNombreFigura() + " es mayor que el " + triangulo1.getNombreFigura());
+		}
+		
 		Circulo circulo1 = new Circulo();
 		
 		circulo1.setR(5);
@@ -48,6 +54,13 @@ public class Main {
 		circulo2.setR(2.5);
 		circulo2.setNombreFigura("Círculo 2: ");
 		System.out.println("Área del " + circulo2.getNombreFigura() + circulo2.calcularArea());
+		
+		if (circulo1.mayorQue(circulo2)) {
+			System.out.println("El " + circulo1.getNombreFigura() + " es mayor que el " + circulo2.getNombreFigura());
+		} else {
+			System.out.println("El " + circulo2.getNombreFigura() + " es mayor que el " + circulo1.getNombreFigura());
+		}
+		
 		
 		
 		
