@@ -17,11 +17,8 @@ public class Main {
 		rectangulo2.setNombreFigura("Rectángulo 2: ");
 		System.out.println("Área del " + rectangulo2.getNombreFigura()+ rectangulo2.calcularArea());
 		
-		if (rectangulo1.mayorQue(rectangulo2)) {
-			System.out.println("El " + rectangulo1.getNombreFigura() + " es mayor que el " + rectangulo2.getNombreFigura() ) ;
-		} else {
-			System.out.println("El " + rectangulo2.getNombreFigura() + " es mayor que el " + rectangulo1.getNombreFigura());
-		}
+		FiguraGeometrica rectanguloMayor = CompararFiguras.compararFiguras(rectangulo1, rectangulo2);
+		System.out.println("El " + rectanguloMayor.getNombreFigura() + " es mayor");
 		
 		Triangulo triangulo1 = new Triangulo();
 		
@@ -37,11 +34,8 @@ public class Main {
 		triangulo2.setNombreFigura("Triángulo 2: ");
 		System.out.println("Área del " + triangulo2.getNombreFigura() + triangulo2.calcularArea());
 		
-		if (triangulo1.mayorQue(triangulo2)){
-			System.out.println("El " + triangulo1.getNombreFigura() + " es mayor que el " + triangulo2.getNombreFigura());
-		} else {
-			System.out.println("El " + triangulo2.getNombreFigura() + " es mayor que el " + triangulo1.getNombreFigura());
-		}
+		FiguraGeometrica trianguloMayor = CompararFiguras.compararFiguras(triangulo1, triangulo2);
+		System.out.println("El " + trianguloMayor.getNombreFigura() + " es mayor");
 		
 		Circulo circulo1 = new Circulo();
 		
@@ -55,22 +49,8 @@ public class Main {
 		circulo2.setNombreFigura("Círculo 2: ");
 		System.out.println("Área del " + circulo2.getNombreFigura() + circulo2.calcularArea());
 		
-		if (circulo1.mayorQue(circulo2)) {
-			System.out.println("El " + circulo1.getNombreFigura() + " es mayor que el " + circulo2.getNombreFigura());
-		} else {
-			System.out.println("El " + circulo2.getNombreFigura() + " es mayor que el " + circulo1.getNombreFigura());
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
+		FiguraGeometrica circuloMayor = CompararFiguras.compararFiguras(circulo1, circulo2);
+		System.out.println("El " + circuloMayor.getNombreFigura() + " es mayor");
 
 	}
 
